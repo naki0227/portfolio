@@ -20,7 +20,7 @@ export default function Home() {
         <nav aria-label="メインナビゲーション">
           <a href="#work">Works</a>
           <a href="#archive">Archive</a>
-          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
           <a href="#about">About</a>
         </nav>
         <a
