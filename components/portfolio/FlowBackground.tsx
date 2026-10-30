@@ -14,6 +14,9 @@ export function FlowBackground({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    // Data Saver: keep the CSS backdrop and skip downloading the graphics library.
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (connection?.saveData) return;
     let disposed = false;
     let cleanup: (() => void) | undefined;
     // Keep the graphics library out of the initial content path.
